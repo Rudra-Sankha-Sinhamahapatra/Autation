@@ -59,11 +59,6 @@ const config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
-        scroll: {
-          to: {
-            transform: 'translate(calc(-50% - 0.5rem))',
-          },
-        },
         spotlight: {
           '0%': {
             opacity: '0',
@@ -117,8 +112,6 @@ const config = {
         },
       },
       animation: {
-        scroll:
-          'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
         spotlight: 'spotlight 2s ease .75s 1 forwards',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',

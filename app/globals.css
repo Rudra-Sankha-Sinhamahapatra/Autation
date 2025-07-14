@@ -3,6 +3,38 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-left {
+  animation: scrollLeft var(--animation-duration, 40s) linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scrollRight var(--animation-duration, 40s) linear infinite;
+}
+
+@theme {
+  --animate-scroll-left: scrollLeft var(--animation-duration, 40s) linear infinite;
+  --animate-scroll-right: scrollRight var(--animation-duration, 40s) linear infinite;
+}
+
 *,
 *::before,
 *::after {
